@@ -1,6 +1,6 @@
-import { Icon } from './Icon';
-
 import '../styles/button.scss';
+
+import { Icon } from './Icon';
 import { ButtonHTMLAttributes } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,7 +12,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export function Button({ iconName, title, selected, ...rest }: ButtonProps) {
   return (
     <button type="button" {...(selected && { className: 'selected' })} {...rest}>
-      <Icon name={iconName} color={selected ? '#FAE800' : '#FBFBFB'} />
+      <Icon name={iconName} color={selected ? '#ff7bbecc' : '#FBFBFB'} />
       {title}
     </button>
   );
